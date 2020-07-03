@@ -1,3 +1,4 @@
 class Appointment < ApplicationRecord
-  has_many :doctors, through :patients 
+  belongs_to :doctor
+  belongs_to :patient
 end
