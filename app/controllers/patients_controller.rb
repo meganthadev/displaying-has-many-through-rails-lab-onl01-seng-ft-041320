@@ -27,6 +27,6 @@ class PatientsController < ApplicationController
   end
   
   def set_patient!
-    @patient = patient.find(params[:id])
+    @patient = Patient.find(params[:id])
   end
 end
