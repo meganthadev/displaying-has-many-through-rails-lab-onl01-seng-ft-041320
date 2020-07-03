@@ -16,5 +16,14 @@ class AppointmentsController < ApplicationController
   def update 
   end   
   
+  private
+
+  def appt_params
+    params.permit(:name, :department)
+  end
+  
+  def set_appt!
+    @appt = appt.find(params[:id])
+  end
   
 end
