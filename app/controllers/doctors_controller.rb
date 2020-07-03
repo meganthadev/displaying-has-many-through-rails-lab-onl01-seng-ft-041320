@@ -9,7 +9,7 @@ class DoctorsController < ApplicationController
   end 
   
   def index 
-    @appointments = Appointment.all 
+    @doctors = Doctor.all 
   end 
   
   def edit 
