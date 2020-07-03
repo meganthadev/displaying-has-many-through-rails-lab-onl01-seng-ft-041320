@@ -23,10 +23,10 @@ class PatientsController < ApplicationController
   private
 
   def patient_params
-    params.permit(:name, :email, :phone_number)
+    params.permit(:name, :age)
   end
   
-  def set_author!
-    @author = Author.find(params[:id])
+  def set_patient!
+    @patient = patient.find(params[:id])
   end
 end
