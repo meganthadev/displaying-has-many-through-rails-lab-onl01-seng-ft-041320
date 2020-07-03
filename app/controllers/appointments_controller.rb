@@ -18,12 +18,12 @@ class AppointmentsController < ApplicationController
   
   private
 
-  def appt_params
-    params.permit(:name, :department)
+  def appointment_params
+    params.permit(:appointment_datetime)
   end
   
-  def set_appt!
-    @appt = appt.find(params[:id])
+  def set_appointment!
+    @appointment = Appointment.find(params[:id])
   end
   
 end
