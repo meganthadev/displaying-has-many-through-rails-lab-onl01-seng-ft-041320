@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_patient!, only: [:show, :index, :edit, :update] 
+
   
   def new 
   end 
@@ -21,13 +21,5 @@ class PatientsController < ApplicationController
   def update 
   end  
   
-  private
 
-  def patient_params
-    params.permit(:name, :age)
-  end
-  
-  def set_patient!
-    @patient = Patient.find(params[:id])
-  end
 end
