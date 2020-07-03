@@ -1,4 +1,6 @@
 class PatientsController < ApplicationController
+  before_action :set_author!, only: [:show, :edit, :update] 
+  
   def new 
   end 
   
