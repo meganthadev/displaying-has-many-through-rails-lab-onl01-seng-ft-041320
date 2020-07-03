@@ -18,4 +18,14 @@ class DoctorsController < ApplicationController
   
   def update 
   end  
+  
+  private
+
+  def doctor_params
+    params.permit(:name, :department)
+  end
+  
+  def set_doctor!
+    @doctor = Doctor.find(params[:id])
+  end
 end
