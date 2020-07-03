@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_author!, only: [:show, :edit, :update] 
+  before_action :set_patient!, only: [:show, :index, :edit, :update] 
   
   def new 
   end 
