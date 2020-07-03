@@ -1,5 +1,5 @@
 <%= @doctor.name %><br>
 <%= @doctor.department %><br>
 <% @doctor.appointments.each do |appt| %>
-  <%= link_to @patient.name, post_path(post) %>
+  <%= link_to @patient.name, patient_path(patient) %>
 <% end %>
