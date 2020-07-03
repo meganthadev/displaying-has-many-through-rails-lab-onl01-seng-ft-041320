@@ -19,4 +19,14 @@ class PatientsController < ApplicationController
   
   def update 
   end  
+  
+  private
+
+  def patient_params
+    params.permit(:name, :email, :phone_number)
+  end
+  
+  def set_author!
+    @author = Author.find(params[:id])
+  end
 end
